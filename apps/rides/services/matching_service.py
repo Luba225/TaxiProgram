@@ -74,8 +74,18 @@ class MatchingService:
 
         try:
             from apps.rides.services.ride_service import RideService
-            RideService.accept_ride(str(ride.id), driver)
+            updated_ride = RideService.accept_ride(str(ride.id), driver)
             logger.info(f"Auto-matched ride {ride.id} → driver {driver.user.email}")
+
+            # Notify driver via WebSocket in real-time
+            try:
+                from apps.rides.services.websocket_service import websocket_service
+                from apps.rides.serializers import ActiveRideForDriverSerializer
+                ride_data = ActiveRideForDriverSerializer(updated_ride).data
+                websocket_service.send_new_ride_to_driver(str(driver.id), dict(ride_data))
+            except Exception as ws_err:
+                logger.warning(f"WS notify to driver failed (non-critical): {ws_err}")
+
             return driver
         except Exception as e:
             logger.error(f"Matching failed for ride {ride.id}: {e}")

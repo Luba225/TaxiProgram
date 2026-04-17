@@ -37,10 +37,10 @@ class ReceiptService:
                 'phone': getattr(ride.user, 'phone_number', ''),
             },
             'driver': {
-                'name': f"{ride.driver.user.first_name} {ride.driver.user.last_name}" if ride.driver else None,
-                'phone': ride.driver.phone_number if ride.driver else None,
-                'vehicle': f"{ride.driver.vehicle_color} {ride.driver.vehicle_make} {ride.driver.vehicle_model}" if ride.driver else None,
-                'plate': ride.driver.vehicle_plate_number if ride.driver else None,
+                'name': f"{ride.driver.user.first_name} {ride.driver.user.last_name}".strip() or ride.driver.user.email,
+                'phone': ride.driver.user.phone_number or '',
+                'vehicle': f"{ride.driver.vehicle_color} {ride.driver.vehicle_make} {ride.driver.vehicle_model}".strip(),
+                'plate': ride.driver.vehicle_plate or '',
             } if ride.driver else None,
             'route': {
                 'pickup_address': ride.pickup_address,

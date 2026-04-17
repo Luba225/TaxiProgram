@@ -3991,3 +3991,1209 @@ django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. Y
 ERROR 2026-04-14 00:27:02,051 log 1 129212032743104 Internal Server Error: /api/v1/users/webhooks/clerk/
 ERROR 2026-04-14 00:27:07,229 log 1 129212022253248 Internal Server Error: /api/v1/users/webhooks/clerk/
 ERROR 2026-04-14 00:33:05,416 log 1 129210735654592 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:47:19,611 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:47:24,841 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:47:24,886 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:47:30,093 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:47:48,892 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:47:53,999 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:48:27,692 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:48:31,796 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:49:52,464 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:49:56,678 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:52:08,222 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:52:15,317 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:52:31,989 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:53:18,906 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:54:22,905 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:56:58,570 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:57:03,753 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:58:39,012 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 13:58:44,230 log 1 134841907541696 Internal Server Error: /api/v1/users/webhooks/clerk/
+ERROR 2026-04-14 14:40:32,195 log 1 129922818975424 Internal Server Error: /admin/users/user/691ae10f-7c19-4dfd-abc8-eb9bd57006dd/delete/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 2181, in delete_view
+    return self._delete_view(request, object_id, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 2208, in _delete_view
+    ) = self.get_deleted_objects([obj], request)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 2176, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 172, in get_deleted_objects
+    to_delete = collector.nested(format_callback)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 239, in nested
+    roots.extend(self._nested(root, seen, format_callback))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 223, in _nested
+    children.extend(self._nested(child, seen, format_callback))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 225, in _nested
+    ret = [format_callback(obj)]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 145, in format_callback
+    no_edit_link = "%s: %s" % (capfirst(opts.verbose_name), obj)
+                                                            ^^^
+  File "/app/apps/payments/models.py", line 198, in __str__
+    return f"{self.user.username} - {self.display_name}"
+              ^^^^^^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'username'
+ERROR 2026-04-14 14:40:44,726 log 1 129922818975424 Internal Server Error: /admin/users/user/691ae10f-7c19-4dfd-abc8-eb9bd57006dd/delete/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 2181, in delete_view
+    return self._delete_view(request, object_id, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 2208, in _delete_view
+    ) = self.get_deleted_objects([obj], request)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 2176, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 172, in get_deleted_objects
+    to_delete = collector.nested(format_callback)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 239, in nested
+    roots.extend(self._nested(root, seen, format_callback))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 223, in _nested
+    children.extend(self._nested(child, seen, format_callback))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 225, in _nested
+    ret = [format_callback(obj)]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 145, in format_callback
+    no_edit_link = "%s: %s" % (capfirst(opts.verbose_name), obj)
+                                                            ^^^
+  File "/app/apps/payments/models.py", line 198, in __str__
+    return f"{self.user.username} - {self.display_name}"
+              ^^^^^^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'username'
+ERROR 2026-04-14 15:03:10,133 log 1 140635000477376 Internal Server Error: /admin/users/user/691ae10f-7c19-4dfd-abc8-eb9bd57006dd/delete/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 2181, in delete_view
+    return self._delete_view(request, object_id, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 2208, in _delete_view
+    ) = self.get_deleted_objects([obj], request)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/options.py", line 2176, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 172, in get_deleted_objects
+    to_delete = collector.nested(format_callback)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 239, in nested
+    roots.extend(self._nested(root, seen, format_callback))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 223, in _nested
+    children.extend(self._nested(child, seen, format_callback))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 225, in _nested
+    ret = [format_callback(obj)]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 145, in format_callback
+    no_edit_link = "%s: %s" % (capfirst(opts.verbose_name), obj)
+                                                            ^^^
+  File "/app/apps/payments/models.py", line 198, in __str__
+    return f"{self.user.username} - {self.display_name}"
+              ^^^^^^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'username'
+ERROR 2026-04-14 19:14:18,589 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:14:24,014 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:14:31,309 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:15:03,027 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:15:32,958 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:15:32,978 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:15:34,244 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:16:02,978 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:16:02,981 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:16:04,228 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:16:32,958 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:16:33,000 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:16:34,257 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:17:02,986 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:17:02,996 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:17:04,325 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:17:33,068 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:17:33,121 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:17:34,378 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:18:02,988 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:18:03,002 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:18:04,346 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:18:27,139 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:18:27,142 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:18:27,169 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:18:56,965 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:18:57,001 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:18:57,003 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:18:57,010 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:18:57,011 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:18:57,041 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:19:27,006 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:19:27,007 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:19:27,010 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:19:27,012 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:19:27,068 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:19:27,094 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:19:57,001 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:19:57,014 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:19:57,025 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:19:57,027 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:19:57,030 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:19:57,099 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:20:26,981 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:20:27,017 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:20:27,024 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:20:27,028 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:20:27,031 log 1 127096633423552 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:20:27,067 log 1 127096403785408 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:21:26,985 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:21:27,015 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:21:27,045 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:21:27,046 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:21:27,049 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:21:27,061 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:21:57,074 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:21:57,078 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:21:57,082 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:21:57,084 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:21:57,088 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:21:57,246 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:22:26,997 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:22:27,031 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:22:27,035 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:22:27,041 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:22:27,042 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:22:27,086 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:22:57,003 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:22:57,038 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:22:57,042 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:22:57,042 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:22:57,047 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:22:57,096 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:23:27,003 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:23:27,012 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:23:27,015 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:23:27,035 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:23:57,005 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:23:57,028 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:23:57,036 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:23:57,047 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:23:57,059 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:23:57,103 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:24:27,024 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:24:27,026 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:24:27,082 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:24:27,087 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:24:27,090 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:24:27,123 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:24:57,025 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:24:57,058 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:24:57,065 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:24:57,071 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:24:57,073 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:24:57,128 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:25:27,017 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:25:27,039 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:25:27,047 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:25:27,048 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:25:27,050 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:25:27,096 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:25:57,012 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:25:57,038 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:25:57,052 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:25:57,058 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:25:57,063 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:25:57,097 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:26:27,048 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:26:27,058 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:26:27,106 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:26:27,118 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:26:57,033 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:26:57,046 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:26:57,052 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:26:57,059 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:26:57,059 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:26:57,115 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:27:27,505 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:27:27,508 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:27:27,591 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:27:27,594 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:27:27,595 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:27:27,598 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:27:57,156 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:27:57,235 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:27:57,278 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:27:57,287 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:27:57,297 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:27:57,325 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:28:09,180 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:28:09,186 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:28:09,186 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:36:42,797 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:36:59,220 log 1 123750017136320 Internal Server Error: /api/v1/rides/68f9c49c-66dd-4a0a-9cf6-419531a7b6a1/detail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+ERROR 2026-04-14 19:37:00,453 log 1 123750017136320 Internal Server Error: /api/v1/rides/68f9c49c-66dd-4a0a-9cf6-419531a7b6a1/detail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+ERROR 2026-04-14 19:37:02,682 log 1 123750017136320 Internal Server Error: /api/v1/rides/68f9c49c-66dd-4a0a-9cf6-419531a7b6a1/detail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+ERROR 2026-04-14 19:37:12,648 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:37:12,670 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:37:12,678 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:37:42,666 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:37:42,678 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:37:42,690 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:38:12,707 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:38:12,715 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:38:12,742 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:38:26,347 log 1 123749998253760 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:38:26,354 log 1 123750017136320 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 19:39:30,429 log 1 123749998253760 Internal Server Error: /api/v1/rides/history/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/rides/views.py", line 336, in history
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/app/apps/rides/serializers_history.py", line 36, in get_driver_info
+    'rating': obj.driver.average_rating,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Driver' object has no attribute 'average_rating'. Did you mean: 'update_rating'?
+ERROR 2026-04-14 19:39:31,812 log 1 123749998253760 Internal Server Error: /api/v1/rides/history/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/rides/views.py", line 336, in history
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/app/apps/rides/serializers_history.py", line 36, in get_driver_info
+    'rating': obj.driver.average_rating,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Driver' object has no attribute 'average_rating'. Did you mean: 'update_rating'?
+ERROR 2026-04-14 19:39:37,067 log 1 123749998253760 Internal Server Error: /api/v1/rides/history/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/rides/views.py", line 336, in history
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/app/apps/rides/serializers_history.py", line 36, in get_driver_info
+    'rating': obj.driver.average_rating,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Driver' object has no attribute 'average_rating'. Did you mean: 'update_rating'?
+ERROR 2026-04-14 19:39:38,443 log 1 123749998253760 Internal Server Error: /api/v1/rides/history/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/rides/views.py", line 336, in history
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/app/apps/rides/serializers_history.py", line 36, in get_driver_info
+    'rating': obj.driver.average_rating,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Driver' object has no attribute 'average_rating'. Did you mean: 'update_rating'?
+ERROR 2026-04-14 19:39:40,860 log 1 123750017136320 Internal Server Error: /api/v1/rides/history/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/rides/views.py", line 336, in history
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/app/apps/rides/serializers_history.py", line 36, in get_driver_info
+    'rating': obj.driver.average_rating,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Driver' object has no attribute 'average_rating'. Did you mean: 'update_rating'?
+ERROR 2026-04-14 19:40:13,136 log 1 123750017136320 Internal Server Error: /api/v1/rides/history/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/rides/views.py", line 336, in history
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/app/apps/rides/serializers_history.py", line 36, in get_driver_info
+    'rating': obj.driver.average_rating,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Driver' object has no attribute 'average_rating'. Did you mean: 'update_rating'?
+ERROR 2026-04-14 19:40:14,525 log 1 123750017136320 Internal Server Error: /api/v1/rides/history/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/rides/views.py", line 336, in history
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/app/apps/rides/serializers_history.py", line 36, in get_driver_info
+    'rating': obj.driver.average_rating,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Driver' object has no attribute 'average_rating'. Did you mean: 'update_rating'?
+ERROR 2026-04-14 19:40:16,910 log 1 123750017136320 Internal Server Error: /api/v1/rides/history/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/rides/views.py", line 336, in history
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/app/apps/rides/serializers_history.py", line 36, in get_driver_info
+    'rating': obj.driver.average_rating,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Driver' object has no attribute 'average_rating'. Did you mean: 'update_rating'?
+ERROR 2026-04-14 19:41:59,296 log 1 123750017136320 Internal Server Error: /api/v1/rides/history/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/rides/views.py", line 336, in history
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/app/apps/rides/serializers_history.py", line 36, in get_driver_info
+    'rating': float(obj.driver.rating) if obj.driver.rating else 0.0,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Driver' object has no attribute 'average_rating'. Did you mean: 'update_rating'?
+ERROR 2026-04-14 19:42:00,686 log 1 123750017136320 Internal Server Error: /api/v1/rides/history/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/rides/views.py", line 336, in history
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/app/apps/rides/serializers_history.py", line 36, in get_driver_info
+    'rating': float(obj.driver.rating) if obj.driver.rating else 0.0,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Driver' object has no attribute 'average_rating'. Did you mean: 'update_rating'?
+ERROR 2026-04-14 19:42:03,182 log 1 123750017136320 Internal Server Error: /api/v1/rides/history/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/apps/rides/views.py", line 336, in history
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/app/apps/rides/serializers_history.py", line 36, in get_driver_info
+    'rating': float(obj.driver.rating) if obj.driver.rating else 0.0,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Driver' object has no attribute 'average_rating'. Did you mean: 'update_rating'?
+ERROR 2026-04-14 19:43:20,466 log 1 139873552955072 Internal Server Error: /api/v1/payments/receipts/receipt/
+ERROR 2026-04-14 19:43:21,529 log 1 139873552955072 Internal Server Error: /api/v1/payments/receipts/receipt/
+ERROR 2026-04-14 19:43:23,619 log 1 139873552955072 Internal Server Error: /api/v1/payments/receipts/receipt/
+ERROR 2026-04-14 19:44:29,045 log 1 124062101665472 Internal Server Error: /api/v1/payments/receipts/receipt/
+ERROR 2026-04-14 19:44:30,202 log 1 124062101665472 Internal Server Error: /api/v1/payments/receipts/receipt/
+ERROR 2026-04-14 20:00:20,927 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:00:20,932 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:00:50,550 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:00:50,588 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:00:50,593 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:00:50,600 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:00:50,602 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:00:50,671 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:01:20,544 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:01:20,575 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:01:20,578 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:01:20,579 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:01:20,586 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:01:20,655 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:01:50,547 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:01:50,589 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:01:50,602 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:01:50,612 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:01:50,622 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:01:50,675 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:02:20,971 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:02:20,972 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:02:21,035 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:02:21,052 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:02:52,066 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:02:52,069 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:02:52,094 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:02:52,103 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:02:52,106 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:02:52,175 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:06:16,001 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:06:16,006 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:07:22,852 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:07:22,857 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:07:52,860 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:07:52,868 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:07:52,893 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:08:22,921 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:08:22,926 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:08:22,937 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:08:52,876 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:08:52,877 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:08:52,898 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:08:58,769 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:09:29,056 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:09:29,068 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:09:29,071 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:09:29,203 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:09:29,225 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-14 20:09:29,234 log 1 128368363169472 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-15 20:54:45,250 log 1 125814272153280 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-15 20:54:55,220 log 1 125814280545984 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-15 20:55:05,260 log 1 125814272153280 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-15 20:55:15,316 log 1 125814280545984 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-15 20:57:35,072 log 1 125814272153280 Internal Server Error: /api/v1/drivers/update_location/
+ERROR 2026-04-15 20:57:40,052 log 1 125814280545984 Internal Server Error: /api/v1/drivers/update_location/

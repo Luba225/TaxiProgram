@@ -165,9 +165,16 @@ class RideViewSet(viewsets.ReadOnlyModelViewSet):
         try:
             ride = RideService.cancel_ride(
                 pk, request.user,
-                serializer.validated_data['reason'],
+                serializer.validated_data.get('reason', 'cancelled_by_user'),
                 serializer.validated_data.get('comment', '')
             )
+            # Notify driver via WebSocket if one was assigned
+            if ride.driver:
+                try:
+                    from .services.websocket_service import websocket_service
+                    websocket_service.send_ride_cancelled_to_driver(str(ride.driver.id), str(ride.id))
+                except Exception:
+                    pass
             return Response(RideSerializer(ride).data)
         except ValueError as e:
              return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)

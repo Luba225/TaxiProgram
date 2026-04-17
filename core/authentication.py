@@ -150,14 +150,31 @@ class ClerkAuthentication(BaseAuthentication):
 
     def _get_or_create_user(self, payload: dict) -> User:
         clerk_user_id = payload.get('sub')
-        email = payload.get('email')
-        phone_number = payload.get('phone_number')
+        # Debug: log full payload to see structure
+        logger.info("JWT Payload keys: %s", list(payload.keys()))
+        logger.info("JWT Payload: %s", payload)
+        email = payload.get('email') or payload.get('email_address') or payload.get('primary_email_address')
+        phone_number = payload.get('phone_number') or payload.get('phone')
 
         if not clerk_user_id:
             raise AuthenticationFailed('Token missing user ID')
 
+        first_name = payload.get('given_name') or payload.get('first_name') or ''
+        last_name = payload.get('family_name') or payload.get('last_name') or ''
+
         try:
-            return User.objects.get(clerk_user_id=clerk_user_id)
+            user = User.objects.get(clerk_user_id=clerk_user_id)
+            updates = []
+            if first_name and not user.first_name:
+                user.first_name = first_name
+                updates.append('first_name')
+            if last_name and not user.last_name:
+                user.last_name = last_name
+                updates.append('last_name')
+            if updates:
+                user.save(update_fields=updates)
+                logger.info("Updated name for user %s from JWT: %s", user.email, updates)
+            return user
         except User.DoesNotExist:
             pass
 
@@ -189,8 +206,8 @@ class ClerkAuthentication(BaseAuthentication):
         return User.objects.create_user(
             email=email,
             clerk_user_id=clerk_user_id,
-            first_name=payload.get('given_name') or '',
-            last_name=payload.get('family_name') or '',
+            first_name=first_name,
+            last_name=last_name,
             phone_number=phone_number,
             is_verified=payload.get('email_verified', False) or payload.get('phone_number_verified', False)
         )

@@ -498,3 +498,4 @@ Traceback (most recent call last):
     admin.site = taxi_admin
                  ^^^^^^^^^^
 NameError: name 'taxi_admin' is not defined
+WARNING 2026-04-14 12:57:35,831 state 1 134212999238400 Substantial drift from celery@3397e955586e may mean clocks are out of sync.  Current drift is 19 seconds.  [orig: 2026-04-14 12:57:34.769176 recv: 2026-04-14 12:57:15.746240]

@@ -172,6 +172,9 @@ FCM_SENDER_ID = config('FCM_SENDER_ID', default='')
 FCM_PROJECT_ID = config('FCM_PROJECT_ID', default='')
 FIREBASE_CREDENTIALS_PATH = config('FIREBASE_CREDENTIALS_PATH', default='')
 
+# Google Maps
+GOOGLE_MAPS_API_KEY = config('GOOGLE_MAPS_API_KEY', default='')
+
 # CORS Configuration
 CORS_ALLOWED_ORIGINS = config(
     'CORS_ALLOWED_ORIGINS',

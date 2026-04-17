@@ -9,9 +9,9 @@ from apps.payments.views import PaymentViewSet, PaymentMethodViewSet, fondy_call
 from apps.payments.receipt_views import ReceiptViewSet
 
 router = DefaultRouter()
-router.register(r'', PaymentViewSet, basename='payment')
 router.register(r'payment-methods', PaymentMethodViewSet, basename='payment-method')
 router.register(r'receipts', ReceiptViewSet, basename='receipt')
+router.register(r'transactions', PaymentViewSet, basename='payment')
 
 urlpatterns = [
     path('callback/liqpay/', liqpay_callback, name='liqpay-callback'),

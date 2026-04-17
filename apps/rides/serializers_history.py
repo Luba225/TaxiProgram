@@ -30,18 +30,20 @@ class RideHistorySerializer(serializers.ModelSerializer):
         if not obj.driver:
             return None
         
+        driver = obj.driver
+        name = f"{driver.first_name} {driver.last_name}".strip() or driver.user.get_full_name() or driver.user.email
         return {
-            'id': str(obj.driver.id),
-            'name': obj.driver.user.first_name,
-            'rating': obj.driver.average_rating,
-            'total_rides': obj.driver.total_rides,
-            'phone': obj.driver.phone_number,
+            'id': str(driver.id),
+            'name': name,
+            'rating': float(driver.rating) if driver.rating else 0.0,
+            'total_rides': driver.total_rides,
+            'phone': driver.user.phone_number or '',
             'vehicle': {
-                'make': obj.driver.vehicle_make,
-                'model': obj.driver.vehicle_model,
-                'color': obj.driver.vehicle_color,
-                'plate': obj.driver.vehicle_plate_number,
-                'year': obj.driver.vehicle_year,
+                'make': driver.vehicle_make,
+                'model': driver.vehicle_model,
+                'color': driver.vehicle_color,
+                'plate': driver.vehicle_plate or '',
+                'year': driver.vehicle_year,
             }
         }
 

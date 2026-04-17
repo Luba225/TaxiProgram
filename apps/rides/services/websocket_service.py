@@ -100,5 +100,45 @@ class WebSocketService:
         )
 
 
+    def send_new_ride_to_driver(self, driver_id: str, ride_data: dict):
+        """Send new ride assignment notification to driver."""
+        if not self.channel_layer:
+            logger.warning("Channel layer not configured")
+            return
+
+        group_name = f'driver_{driver_id}'
+
+        async_to_sync(self.channel_layer.group_send)(
+            group_name,
+            {
+                'type': 'new_ride_request',
+                'data': {
+                    **ride_data,
+                    'timestamp': timezone.now().isoformat(),
+                }
+            }
+        )
+        logger.info(f"Sent new ride request to driver {driver_id}: ride {ride_data.get('id')}")
+
+    def send_ride_cancelled_to_driver(self, driver_id: str, ride_id: str):
+        """Notify driver that passenger cancelled the ride."""
+        if not self.channel_layer:
+            return
+
+        group_name = f'driver_{driver_id}'
+
+        async_to_sync(self.channel_layer.group_send)(
+            group_name,
+            {
+                'type': 'ride_cancelled',
+                'data': {
+                    'ride_id': ride_id,
+                    'timestamp': timezone.now().isoformat(),
+                }
+            }
+        )
+        logger.info(f"Sent ride_cancelled to driver {driver_id} for ride {ride_id}")
+
+
 # Singleton instance
 websocket_service = WebSocketService()

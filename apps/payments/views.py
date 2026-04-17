@@ -37,6 +37,8 @@ class PaymentViewSet(viewsets.ReadOnlyModelViewSet):
 
     def get_queryset(self):
         user = self.request.user
+        if not user or not user.is_authenticated:
+            return Payment.objects.none()
         if getattr(user, 'role', None) == 'admin':
             return Payment.objects.all()
         return Payment.objects.for_user(user)
@@ -207,6 +209,8 @@ class PaymentMethodViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
+        if not self.request.user or not self.request.user.is_authenticated:
+            return PaymentMethod.objects.none()
         return PaymentMethod.objects.filter(
             user=self.request.user,
             is_active=True

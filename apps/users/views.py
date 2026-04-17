@@ -26,11 +26,11 @@ from apps.users.serializers import (
 )
 from apps.users.services.security import PasswordService, SecurityAuditService
 from apps.users.services.account_deletion import AccountDeletionService
-#from apps.users.services import (
-#    handle_clerk_user_created,
-#    handle_clerk_user_deleted,
-#    handle_clerk_user_updated,
-#)
+from apps.users.services import (
+    handle_clerk_user_created,
+    handle_clerk_user_deleted,
+    handle_clerk_user_updated,
+)
 from core.permissions import IsAdminUser, IsOwnerOrAdmin
 
 logger = logging.getLogger(__name__)

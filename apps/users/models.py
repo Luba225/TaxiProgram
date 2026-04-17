@@ -107,8 +107,8 @@ class User(AbstractBaseUser, PermissionsMixin):
         max_length=100, blank=True,
         verbose_name='Прізвище',
     )
-    profile_image = models.URLField(
-        max_length=500, blank=True,
+    profile_image = models.TextField(
+        blank=True,
         verbose_name='Фото',
     )
     date_of_birth = models.DateField(

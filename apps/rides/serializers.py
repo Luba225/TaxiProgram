@@ -101,9 +101,9 @@ class PriceEstimateSerializer(serializers.Serializer):
 
 
 class RideCancelSerializer(serializers.Serializer):
-    """Serializer for ride rating (passenger rates the ride)."""
-    rating = serializers.IntegerField(min_value=1, max_value=5)
-    comment = serializers.CharField(required=False, allow_blank=True)
+    """Serializer for ride cancellation."""
+    reason = serializers.CharField(required=False, allow_blank=True, default='cancelled_by_user')
+    comment = serializers.CharField(required=False, allow_blank=True, default='')
 
 
 class RatePassengerSerializer(serializers.Serializer):

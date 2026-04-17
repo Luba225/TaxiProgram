@@ -126,14 +126,23 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
 class UpdateProfileSerializer(serializers.ModelSerializer):
     """Serializer for updating user profile."""
-    
+
+    profile_image = serializers.CharField(required=False, allow_blank=True)
+
     class Meta:
         model = User
         fields = [
             'first_name', 'last_name', 'phone_number', 
             'profile_image', 'date_of_birth', 'city', 'language', 'gender'
         ]
-    
+
+    def validate_profile_image(self, value):
+        if value and not value.startswith('data:image/') and not value.startswith('http'):
+            raise serializers.ValidationError(
+                "profile_image must be a URL or a base64 data URI (data:image/...)"
+            )
+        return value
+
     def validate_phone_number(self, value):
         """Validate phone number format."""
         if value and not value.startswith('+'):
